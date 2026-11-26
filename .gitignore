@@ -1,6 +1,7 @@
-venv/
 .idea/
-requirements.txt
-.pytest_cache
-
-
+.vscode/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/

@@ -1,0 +1,15 @@
+{
+  "description": "Список пивоварен: каждый элемент соответствует brewery.json по набору обязательных полей.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": {"type": "string"},
+      "name": {"type": "string"},
+      "brewery_type": {"type": "string"},
+      "city": {"type": "string"},
+      "country": {"type": "string"}
+    },
+    "required": ["id", "name", "brewery_type", "city", "country"]
+  }
+}

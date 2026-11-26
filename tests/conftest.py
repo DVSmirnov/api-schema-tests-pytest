@@ -5,13 +5,13 @@ def pytest_addoption(parser):
     parser.addoption(
         "--url",
         default="https://ya.ru",
-        help="This is a base site"
+        help="Адрес сайта, который проверяем",
     )
-
     parser.addoption(
         "--status_code",
         default=200,
-        help="successful status code "
+        type=int,  # без type=int из командной строки приходит строка "404"
+        help="Ожидаемый статус-код ответа",
     )
 
 
@@ -22,4 +22,4 @@ def base_url(request):
 
 @pytest.fixture
 def status_code(request):
-    return request.config.getoption('--status_code')
+    return request.config.getoption("--status_code")
