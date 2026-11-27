@@ -4,7 +4,7 @@ import pytest
 def pytest_addoption(parser):
     parser.addoption(
         "--url",
-        default="https://ya.ru",
+        default="https://example.com",
         help="Адрес сайта, который проверяем",
     )
     parser.addoption(
